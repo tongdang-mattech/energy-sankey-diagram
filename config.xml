@@ -1,0 +1,2236 @@
+<config>
+<!--  COMMENT
+		"categoryColors" should contain <categoryColor> tags which specifies a certain color (@value) (in hexadecimals) for a certain type of flow (@name). 
+	 -->
+<categoryColors>
+<categoryColor name="Oil" value="#726991"/>
+<categoryColor name="Oil products" value="#948BB3"/>
+<categoryColor name="Power plant losses" value="#777777"/>
+<categoryColor name="Coal" value="#A7A9AC"/>
+<categoryColor name="Natural gas" value="#00678E"/>
+<categoryColor name="Biofuels and waste" value="#488652"/>
+<categoryColor name="Nuclear" value="#226244"/>
+<categoryColor name="Hydro" value="#007FFF"/>
+<categoryColor name="Geothermal" value="#8B636C"/>
+<categoryColor name="Solar/Tide/Wind" value="#91547F"/>
+<categoryColor name="Electricity" value="#00B3D2"/>
+<categoryColor name="Heat" value="#33AA33"/>
+<categoryColor name="Industry" value="#666666"/>
+<categoryColor name="Transport" value="#948BB3"/>
+<categoryColor name="Other" value="#488652"/>
+<categoryColor name="Non-energy use" value="#A7A9AC"/>
+</categoryColors>
+<flowCurvature>2</flowCurvature>
+<!-- (0-5) 3 -->
+<flowSlope>60</flowSlope>
+<!--  (0-60) 35 -->
+<animation duration="5000"/>
+<!--  the duration of the total animation in milliseconds.  -->
+<attributeCollection>
+<attributes id="0" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.74" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="1" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="2" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="3" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="4" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="5" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="6" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="7" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="8" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="9" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="10" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="11" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="12" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="13" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="14" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="15" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="16" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="17" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="18" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="19" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="20" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="21" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="22" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="23" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="24" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.15" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="25" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="26" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="27" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="28" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="29" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="30" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="31" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="32" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="33" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="34" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="35" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="36" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="37" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="38" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="39" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="40" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="41" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="100" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.12" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.12001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.07" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.35" posY="0.9"/>
+<attribute attrIn="0" dir="vertical" posX="0.4" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.55" posY="0.65" type="transformation"/>
+<attribute attrIn="9" attrOut="10" dir="horizontal" posX="0.55" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.67" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.72" posY="0.08" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="13" dir="horizontal" posX="0.63" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.77" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="14" dir="vertical" posX="0.94" posY="0.12" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="101" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.12" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.12001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.07" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.35" posY="0.9"/>
+<attribute attrIn="0" dir="vertical" posX="0.4" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.55" posY="0.65" type="transformation"/>
+<attribute attrIn="9" attrOut="10" dir="horizontal" posX="0.55" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.67" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.72" posY="0.08" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="13" dir="horizontal" posX="0.63" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.77" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="14" dir="vertical" posX="0.94" posY="0.12" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="102" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.12" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.12001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.07" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.35" posY="0.9"/>
+<attribute attrIn="0" dir="vertical" posX="0.4" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.55" posY="0.65" type="transformation"/>
+<attribute attrIn="9" attrOut="10" dir="horizontal" posX="0.55" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.67" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.72" posY="0.08" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="13" dir="horizontal" posX="0.63" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.77" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="14" dir="vertical" posX="0.94" posY="0.12" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="103" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.12" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.12001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.07" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.35" posY="0.9"/>
+<attribute attrIn="0" dir="vertical" posX="0.4" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.55" posY="0.65" type="transformation"/>
+<attribute attrIn="9" attrOut="10" dir="horizontal" posX="0.55" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.67" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.72" posY="0.08" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="13" dir="horizontal" posX="0.63" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.77" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="14" dir="vertical" posX="0.94" posY="0.12" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="104" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.12" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.12001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.07" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.35" posY="0.9"/>
+<attribute attrIn="0" dir="vertical" posX="0.4" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.55" posY="0.65" type="transformation"/>
+<attribute attrIn="9" attrOut="10" dir="horizontal" posX="0.55" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.67" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.72" posY="0.08" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="13" dir="horizontal" posX="0.63" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.77" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="14" dir="vertical" posX="0.94" posY="0.12" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="105" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.12" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.12001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.07" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.35" posY="0.9"/>
+<attribute attrIn="0" dir="vertical" posX="0.4" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.55" posY="0.65" type="transformation"/>
+<attribute attrIn="9" attrOut="10" dir="horizontal" posX="0.55" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.67" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.72" posY="0.08" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="13" dir="horizontal" posX="0.63" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.77" posY="0.12" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="14" dir="vertical" posX="0.94" posY="0.12" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="200" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.225" defaultHubDistance="0.1" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="201" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.225" defaultHubDistance="0.1" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="202" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.225" defaultHubDistance="0.1" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="203" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.225" defaultHubDistance="0.1" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="204" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.225" defaultHubDistance="0.1" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="205" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.225" defaultHubDistance="0.1" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="206" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.225" defaultHubDistance="0.1" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="207" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.225" defaultHubDistance="0.1" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="208" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.225" defaultHubDistance="0.1" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.8" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<!--  **************************** Exceptions ******************************** -->
+<!--  *The following paramatrizations AND the belowed meniond changed in the data file:  -->
+<!--  *****UAE - Oil prodcuts Stat diff moved manually to the first stat diffs (next to oil ones) -->
+<!--  *****Kosovo - Oil production to be added  and major changes in the parametrization (it used to have a unique coding ) -->
+<!--  Remianing problems - Hong Kong - oil prod inputs to other transformation; Qatar NGL reporting is major there  -->
+<!--  **************************** Japan ******************************** -->
+<attributes id="507" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.13" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.72" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<!--  **************************** Latvia ******************************** -->
+<attributes id="524" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.43" posY="0.3" defaultHubDistance="0.12" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.65" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<!--  **************************** Vietnam ******************************** -->
+<attributes id="526" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.16" defaultHubDistance="0.1" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.665" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<!--  **************************** Benin ******************************** -->
+<attributes id="528" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.1"/>
+<hub dist="0.1"/>
+<hub dist="0.1"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.55" defaultHubDistance="0.16" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.75" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.755" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<!--  **************************** Tanzania ******************************** -->
+<attributes id="534" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.1"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.14" defaultHubDistance="0.39" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.75" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<!--  **************************** China (HK) India Iran Non-OECD Eurasia PRC Russia South Africa Turkey ******************************** -->
+<attributes id="505" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.10" posY="0.14" defaultHubDistance="0.015" showAccumulatedOutValue="true">
+<hub dist="0.00"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.05"/>
+<hub dist="0.05"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+<hub dist="0.015"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.18" posY="0.14001" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="horizontal" posX="0.21" posY="0.9" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="4" attrOut="5" dir="horizontal" posX="0.21" posY="0.09" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="0" dir="vertical" posX="0.3" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="6" dir="horizontal" posX="0.33" posY="0.9"/>
+<attribute attrIn="7" attrOut="8" dir="vertical" posX="0.42" posY="0.17" defaultHubDistance="0.17" type="transformation"/>
+<attribute attrIn="0" dir="vertical" posX="0.52" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="9" attrOut="10" dir="vertical" posX="0.62" posY="0.75" type="transformation"/>
+<attribute attrIn="11" attrOut="12" dir="horizontal" posX="0.62" posY="0.10" defaultHubDistance="0.02" type="stock"/>
+<attribute attrIn="0" dir="vertical" posX="0.72" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="13" attrOut="14" dir="horizontal" posX="0.75" posY="0.10" defaultHubDistance="0.02" type="stat"/>
+<attribute attrIn="15" dir="horizontal" posX="0.68" posY="0.9" defaultHubDistance="0.05">
+<hub dist="0.00"/>
+<hub dist="0.07"/>
+<hub dist="0.04"/>
+<hub dist="0.045"/>
+</attribute>
+<attribute attrIn="0" dir="vertical" posX="0.82" posY="0.14" defaultHubDistance="0.015" type="group"/>
+<attribute attrIn="16" dir="vertical" posX="0.94" posY="0.14" defaultHubDistance="0.15" showAccumulatedInValue="true"/>
+</attributes>
+<attributes id="1000" groupingAttributeIndex="0" widthAttributeIndex="0">
+<attribute attrIn="1" dir="vertical" posX="0.1" posY="0.14" defaultHubDistance="0.07" showAccumulatedOutValue="true"/>
+<attribute attrIn="0" dir="vertical" posX="0.2" posY="0.14" defaultHubDistance="0.08" type="group"/>
+<attribute attrIn="2" attrOut="3" dir="vertical" posX="0.55" posY="0.14" defaultHubDistance="0.148" type="transformation">
+<hub dist="0.0"/>
+<hub dist="0.286"/>
+<hub dist="0.176"/>
+<hub dist="0.110"/>
+<hub dist="0.088"/>
+</attribute>
+<attribute attrIn="4" dir="vertical" posX="0.85" posY="0.14" defaultHubDistance="0.022" showAccumulatedInValue="False"/>
+</attributes>
+</attributeCollection>
+<dataSources>
+<source name="Canada">
+<file src="data/Canada.SBBSBSBSBSBBSS_YY.txt" name="Balance" attributeId="2"/>
+<file src="data/Canada_D.txt" name="Final consumption" attributeId="1000"/>
+</source>
+<!-- 
+		<source name="Former Soviet Union (if no detail)">	
+			<file src="data/Former Soviet Union (if no detail).SBBSBSBBBBS_YY.txt" name="Balance" attributeId="7"/>
+			<file src="data/Former Soviet Union (if no detail)_D.txt" name="Final consumption" attributeId="1000"/>
+		</source>	
+		<source name="Former Yugoslavia (if no detail)">	
+			<file src="data/Former Yugoslavia (if no detail).SBBSBSBSBSBBS_YY.txt" name="Balance" attributeId="2"/>
+			<file src="data/Former Yugoslavia (if no detail)_D.txt" name="Final consumption" attributeId="1000"/>
+		</source>	
+		<source name="Other Africa">	
+			<file src="data/Other Africa.SBBSBBBSBB_YY.txt" name="Balance" attributeId="12"/>
+			<file src="data/Other Africa_D.txt" name="Final consumption" attributeId="1000"/>
+		</source>	
+		<source name="Other Non-OECD Americas">	
+			<file src="data/Other Non-OECD Americas.SBBBSBSBSBBS_YY.txt" name="Balance" attributeId="15"/>
+			<file src="data/Other Non-OECD Americas_D.txt" name="Final consumption" attributeId="1000"/>
+		</source>	
+		<source name="Other Asia">	
+			<file src="data/Other Asia.SBBSBSBSBSBBS_YY.txt" name="Balance" attributeId="2"/>
+			<file src="data/Other Asia_D.txt" name="Final consumption" attributeId="1000"/>
+		</source>	
+		<source name="Former Yugoslavia">	
+			<file src="data/Former Yugoslavia.SBBSBSBSBSBBSSS_YY.txt" name="Balance" attributeId="2"/>
+			<file src="data/Former Yugoslavia_D.txt" name="Final consumption" attributeId="1000"/>
+		</source>	
+		<source name="Former Soviet Union">	
+			<file src="data/Former Soviet Union.SBBSBSBSBSBSBSSS_YY.txt" name="Balance" attributeId="1"/>
+			<file src="data/Former Soviet Union_D.txt" name="Final consumption" attributeId="1000"/>
+		</source>
+ -->
+</dataSources>
+</config>

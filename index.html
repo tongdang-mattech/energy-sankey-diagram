@@ -1,0 +1,1007 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" style="height:100%">
+
+<head>
+
+    <title>IEA Sankey Diagram</title>
+
+    <!--meta http-equiv="X-UA-Compatible" content="IE=edge" /-->
+    <link href="styles/jquery/start/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+    <script src="lib/jquery-1.8.3.js"></script>
+    <script src="lib/jquery-ui-1.9.2.custom.js"></script>
+
+
+    <script type="text/javascript" src="lib/jquery.mousewheel.min.js"></script>
+
+    <!-- CSS files -->
+    <link type="text/css" href="./styles/core.css" rel="stylesheet" />
+
+    <!-- LESS CSS -->
+    <!-- <link type="text/css" class="gav-core" href="styles/core.less" rel="stylesheet/less" /> -->
+    <!--
+        <link type="text/css" media="none" href="styles/handheld.less" rel="stylesheet/less" />
+        <link type="text/css" media="none" href="styles/alternate.less" rel="stylesheet/less" />
+        -->
+
+    <!-- LESS JS -->
+    <script type="text/javascript" src="lib/less-1.3.0.min.js"></script>
+
+
+
+    <style type="text/css" media="print">
+        #printModeOff {
+            display: none !important;
+            color: red;
+        }
+    </style>
+
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .gav-tab-panel {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .ui-state-default {
+            /*
+            background: none;
+            //background-color: #848DA2;
+             background: #848DA2 50% 50% repeat-x;
+            */
+            color: #333;
+
+
+        }
+
+        .gav-animation-bar .gav-slider-progress {
+            background-color: #5E5E5E;
+        }
+
+        .ui-widget-content {
+            background: none;
+            border: none;
+        }
+
+        .ui-state-default {
+            border: none;
+        }
+
+        .ui-custom-active {
+            /*
+            border: 1px solid #acdd4a;
+            background: #6eac2c 50% 50% repeat-x;
+            */
+            font-weight: normal;
+            color: #ffffff;
+            background: #8A8A8A;
+
+        }
+
+        .gav-tab-panel {
+            border: 0px;
+        }
+
+        .ui-state-hover {
+            color: white;
+            background: none;
+            background-color: #848DA2;
+        }
+
+        .high {
+            height: 100%;
+        }
+
+        .ui-accordion .ui-accordion-header {
+            padding: .3em .0em .3em .7em;
+            border-radius: 0;
+            border: none;
+            background-color: #BBB;
+        }
+
+        .ui-accordion .ui-accordion-content {
+            overflow: hidden;
+        }
+
+        .ui-accordion-header:hover {
+            background: none;
+            background-color: #636B7C;
+        }
+
+        .ui-state-active {
+            background: none;
+            background-color: #8A8A8A;
+            color: white;
+        }
+
+
+        .gav-record-table tr.selected {
+            background: #333;
+        }
+
+        .gav-record-table td {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+
+
+        .gav-btn-wrap>input[type="checkbox"] {
+            background: #333;
+        }
+
+        .timegraph-icon {
+            background-image: url('styles/images/timegraph-icon.png');
+        }
+
+        .hidepanel-icon {
+            background-image: url('styles/images/hide-panel.png');
+        }
+
+        .colorlegend-icon {
+            background-image: url('styles/images/colorlegend.png');
+        }
+
+        .help-icon {
+            background-image: url('styles/images/help_icon.png');
+            height: 16px;
+            width: 16px;
+        }
+
+        .print-icon {
+            background-image: url('styles/images/print.png');
+        }
+
+        .glossary-icon {
+            background-image: url('styles/images/glossary.png');
+        }
+
+        .handles-icon {
+            background-image: url('styles/images/handles.png');
+        }
+
+        .piechart-icon {
+            background-image: url('styles/images/pieicon.png');
+        }
+
+        #printModeOff {
+            bottom: 10px;
+            position: absolute;
+            right: 10px;
+        }
+
+
+        .brick {
+            right: 4px;
+            position: absolute;
+            display: inline-block;
+            bottom: 41px;
+        }
+
+        .ui-widget-header {
+            border: 1px solid #DDD;
+            background: #FAFAFA;
+            color: #222;
+            font-weight: bold;
+        }
+
+        .ui-dialog .ui-dialog-content {
+            background: white;
+        }
+
+        .ui-dialog-title {
+            float: none !important;
+            display: block;
+            text-align: center;
+        }
+
+        .gav-chart-axis-label {
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        /*
+            Station labels
+            */
+
+        .default-station-label {
+            font-family: Arial;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        .stock-label {
+            font-family: Arial;
+            font-size: 10px;
+            font-style: italic;
+            font-weight: normal;
+        }
+
+        .stat-label {
+            font-family: Arial;
+            font-size: 10px;
+            font-style: italic;
+            font-weight: normal;
+        }
+    </style>
+
+
+
+
+    <script type="text/javascript" src="scripts/gav-sankey-min.js"></script>
+    <!-- URL Query Parser -->
+    <script type="text/javascript" src="scripts/urlQueryParser.js"></script>
+
+    <script type="text/javascript">
+
+        var context, ds, animationController, mapLoader, dataLoader, configXML, animationControlBar, recordSelector, categoryColorsObject;
+        var attributeId = 0;
+        var animationDuration = 5000;
+        var firstTime = true;
+        var isInPresentationMode = false;
+
+        function initiateConfig() {
+            loadXMLDoc("config.xml");
+        }
+
+        function loadXMLDoc(url) {
+            var xmlhttp;
+            var txt, xx, x, i;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+                //xmlhttp = new window.XDomainRequest();
+            }
+            else {// code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4) {
+                    configXML = xmlhttp.responseXML;
+
+                    this._countryIndex = 0;
+                    this._subjectIndex = 0;
+                    var self = this;
+                    var queryObj = window.getQueryParamsFromURL();
+                    var queryCountryString, querySubjectString;
+                    if (queryObj != null) {
+                        queryCountryString = queryObj.c;
+                        querySubjectString = queryObj.s;
+                        var xml = configXML.getElementsByTagName("source");
+
+                        $(xml).each(function (index, element) {
+                            if (element.attributes["name"]) {
+                                if (element.attributes["name"].value == queryCountryString) {
+                                    self._countryIndex = index;
+                                }
+
+                                var subXml = element.getElementsByTagName("file");
+
+                                $(subXml).each(function (index, element) {
+                                    if (element.attributes["name"].value == querySubjectString) {
+                                        self._subjectIndex = index;
+                                    }
+                                });
+
+                            }
+                        });
+
+                    }
+
+                    initiateList.call(this, configXML.getElementsByTagName("source"));
+                    if (!$('#accordion').hasClass('ui-accordion')) {
+                        $("#accordion").accordion();
+                        $("#accordion").accordion("option", "icons", null);
+                        $("#accordion").accordion('activate', this._countryIndex);
+                    }
+
+                    $(".ui-accordion-header").each(function () {
+                        $(this).click(function () {
+                            $($($($(this).next().children()[0]).children().children()).children()[0]).click();
+                        });
+                    });
+
+                    categoryColorsObject = createCategoryColorsObject(configXML.getElementsByTagName("categoryColors")[0].getElementsByTagName("categoryColor"));
+                    attributeId = configXML.getElementsByTagName("source")[this._countryIndex].getElementsByTagName("file")[this._subjectIndex].getAttribute("attributeId");
+                    animationDuration = configXML.getElementsByTagName("animation")[0].getAttribute("duration");
+                    initiateData(configXML.getElementsByTagName("source")[this._countryIndex].getElementsByTagName("file")[this._subjectIndex].getAttribute("src"));
+                    _gaq.push(['_trackEvent', 'Country Selected', configXML.getElementsByTagName("source")[this._countryIndex].getAttribute("name")]);
+                    $("#countryDiv").text(configXML.getElementsByTagName("source")[this._countryIndex].getAttribute("name"));
+                    $("#subjectSpan").text(configXML.getElementsByTagName("source")[this._countryIndex].getElementsByTagName("file")[this._subjectIndex].getAttribute("name"));
+                }
+
+            }
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+
+        }
+
+        function createCategoryColorsObject(xmlTags) {
+            var categoryColor;
+            var returnObject = new Object();
+            for (var i = 0; i < xmlTags.length; i++) {
+                returnObject[xmlTags[i].getAttribute("name")] = xmlTags[i].getAttribute("value");
+            }
+            return returnObject;
+        }
+
+        function initiateList(xmlTags) {
+            var accordion = document.getElementById("accordion");
+
+
+
+            var header, theDiv, theTable, tdHtml, fileTags;
+            for (var i = 0; i < xmlTags.length; i++) {
+                header = document.createElement('h3');
+                $(header).html(xmlTags[i].getAttribute("name"));
+
+
+                theDiv = document.createElement("div");
+                $(theDiv).css({
+                    padding: '0 0 0 0em'
+                });
+                theTable = document.createElement("table");
+                $(theTable).addClass('gav-record-table');
+                tdHtml = "";
+                fileTags = xmlTags[i].getElementsByTagName("file");
+
+                //$("#countryDiv").text(configXML.getElementsByTagName("source")[this._countryIndex].getAttribute("name"));
+                for (var j = 0; j < fileTags.length; j++) {
+
+                    if (i == this._countryIndex && j == this._subjectIndex) {
+                        tdHtml += "<tr class='selected'><td data-attributeId=" + fileTags[j].getAttribute("attributeId") + " data-file=" + "\"" + fileTags[j].getAttribute("src") + "\"" + " data-countryName=" + "\"" + xmlTags[i].getAttribute("name") + "\"" + ">" + fileTags[j].getAttribute("name") + "</td></tr>";
+                    }
+                    else {
+                        tdHtml += "<tr><td data-attributeId=" + fileTags[j].getAttribute("attributeId") + " data-file=" + "\"" + fileTags[j].getAttribute("src") + "\"" + " data-countryName=" + "\"" + xmlTags[i].getAttribute("name") + "\"" + ">" + fileTags[j].getAttribute("name") + "</td></tr>";
+
+                    }
+
+                }
+                $(theTable).html(tdHtml);
+                // accordion.appendChild(header);
+                theDiv.appendChild(theTable);
+                // accordion.appendChild(theDiv);
+
+            }
+        }
+
+        function htmlEncode(s) {
+            var el = document.createElement("div");
+            el.innerText = el.textContent = s;
+            s = el.innerHTML;
+            return s;
+        }
+
+        function initiateData(fileName) {
+            if (!dataLoader) {
+                dataLoader = new gav.data.provider.UnicodeTextDataProvider();
+            }
+            dataLoader.readFile(fileName, function (text) {
+                dataLoader.readFileContent(text, onDataSetLoaded);
+            });
+        }
+
+
+
+        function onDataSetLoaded(data) {
+            ds = dataLoader.getDataSet();
+            initiateContext();
+            initiateChart();
+
+            animationController.setProgress(1.0);
+            $("#sliceSpan").text("(" + context.getDataSet().getSliceInformation()[animationController.getSlice()].name + ")");
+
+        }
+
+        function initiateContext() {
+            if (!context) {
+                context = new gav.Context();
+
+                animationController = new gav.animation.AnimationController();
+
+                context.setAnimationController(animationController);
+
+                animationController.addEventListener('sliceExplicitlyChanged', function () {
+                    context.setSlice(animationController.getSlice());
+                    self._colorMap.setSlice(animationController.getSlice());
+                    self._categoricalColorMap.setSlice(animationController.getSlice());
+                });
+
+                animationController.addEventListener('progressChanged', function () {
+                    $("#sliceSpan").text("(" + context.getDataSet().getSliceInformation()[animationController.getSlice()].name + ")");
+                });
+
+                animationController.setDuration(animationDuration);
+
+                animationControlBar = new gav.animation.AnimationControlBar(document.getElementById('myBar'));
+                animationControlBar.setAnimationController(animationController);
+
+                this._colorMapProvider = new gav.representation.ColorMapProvider();
+                this._colorMap = new gav.representation.ColorMap();
+                this._categoricalColorMap = new gav.representation.CategoricalColorMap();
+                this._categoricalColorMap.setCategoryToColorMapping(categoryColorsObject);
+
+                this._colorMapProvider.setColorMaps([this._colorMap, this._categoricalColorMap]);
+                //this._colorMapProvider.setActiveColorMap(this._colorMap);
+
+                this._colorMapProvider.setActiveColorMap(this._categoricalColorMap);
+                //this._colorMapProvider.setActiveColorMapType(gav.representation.CategoricalColorMap);
+
+
+                gav.utils.Binding.bindProperty(context, 'colorMap', this._colorMapProvider, 'activeColorMap');
+                // context.setCategoricalColorMap(this._categoricalColorMap);
+                context.setColorMapProvider(this._colorMapProvider);
+
+                var formatter = new gav.representation.NumericStringProvider();
+                formatter.getNumberFormatter().thousandSeparator = " ";
+                context.setFormatter(formatter);
+
+                this._colorLegend = new gav.components.ColorLegendProvider($("#page")[0]);
+                this._colorLegend.setVisibleConstant(false)
+                this._colorLegend.setPosition(150, 650);
+                this._colorLegend.setContext(context);
+                // this._colorLegend.setIsMovable(false);
+                this._colorLegend.setShowComboBox(false);
+
+                var selectionList = context.getSelectionManager();
+                selectionList.addEventListener("selectionChanged", onSelectionChanged);
+
+                var useRecordList = false;
+                if (useRecordList) {
+                    var recordSelectorContainer = document.createElement('div');
+                    $(recordSelectorContainer).css({
+                        top: '0',
+                        display: false ? 'none' : 'block'
+                    }).addClass('gav-component-record-list');
+
+                    recordSelector = new gav.controls.RecordSelector(recordSelectorContainer);
+                    this._recordSelector = recordSelector;
+                    this._recordSelectorContainer = recordSelectorContainer;
+
+                    recordSelector.setSelectionList(context.getSelectionManager());
+
+                    context._selectionManager.addPickable(recordSelector);
+
+                    var allContainer = document.getElementById("allContainer");
+                    var w = $(allContainer).width();
+                    var h = $(allContainer).height();
+                    var chartContainer = document.getElementById("chartContainer");
+                    allContainer.appendChild(recordSelectorContainer);
+
+                    var recordSelectorWidth = 164;
+                    recordSelectorWidth = $(this._recordSelectorContainer).css('display') === 'none' ? 0 : recordSelectorWidth;
+                    w -= recordSelectorWidth;
+                    $(this._recordSelectorContainer).css({
+                        right: 0,
+                        width: recordSelectorWidth,
+                        height: h
+                    });
+                    this._recordSelector._validateSize();
+                    recordSelector.setDataSet(ds);
+
+                    $(chartContainer).css({
+                        width: w,
+                        height: h
+                    });
+
+
+                }
+
+            }
+            this._colorMap.setDataSet(ds);
+            this._categoricalColorMap.setDataSet(ds);
+            context.setDataSet(ds);
+            animationController.setDataSet(ds);
+
+            animationControlBar.setDataSet(ds);
+        }
+
+        function onSelectionChanged(e) {
+            var selectedRecords = e.getSelectedRecords();
+            for (var i = 0; i < selectedRecords.length; i++) {
+                _gaq.push(['_trackEvent', 'Flow Selected', context.getDataSet().getRecordInformation()[selectedRecords[i]].name]);
+            }
+
+        }
+
+        function initiateChart() {
+
+            $('.chart').each(function (i, el) {
+
+                var comp = $(this).data('component');
+
+                if (!comp || typeof comp == typeof "Batman") {
+                    var comp = gav.components[$(el).attr('data-component')];
+
+                    if (!comp) {
+                        return;
+                    }
+                    comp = new comp(el);
+                    $(this).data('component', comp);
+                }
+
+                comp.setContext(context);
+
+                if (comp instanceof gav.components.SankeyPanel) {
+                    comp.setConfig(getAttributeXML(configXML.getElementsByTagName("attributes")));
+                    comp.setApperance({ curve: $(configXML.getElementsByTagName("flowCurvature")[0]).text(), slope: $(configXML.getElementsByTagName("flowSlope")[0]).text() });
+                    //comp.getComponents()[0].addEventListener("introFinishedEvent",toggleHelp);
+                    comp.setTooltipDelayTime(500);
+                }
+                else if (comp instanceof gav.components.TimeGraphPanel) {
+                    comp.setNote("Note: select flows to view time profiles");
+                    $(el).find(".gav-chart-legend").parent().css({ left: "50px", right: "" });
+                }
+
+
+            });
+
+        }
+
+        function toggleHelp(ev) {
+            if ($(helpContainer).is(":visible")) {
+                $(helpContainer).hide("scale", { 'easing': 'easeOutExpo' }, 1000);
+            }
+            else {
+                $(helpContainer).show("scale", { 'easing': 'easeOutExpo' }, 1000);
+            }
+        }
+
+        function toggleColorLegend() {
+            $(".gav-floating-color-legend").toggle();
+        }
+
+        function togglePrintOn() {
+            $("#nonChartPanels").hide("fade", { 'easing': 'easeOutExpo' }, 1000);
+
+
+            if ($("#dataSourceDiv").width() > 0) {
+                $("#toggleCountryListButton").click();
+            }
+            if ($(".gav-floating-color-legend").is(":visible") == true) {
+                $("#toggleColorLegendButton").click();
+            }
+
+            $("#printModeOff").show("fade", { 'easing': 'easeOutExpo' }, 1000);
+
+            setTimeout(function () { window.print() }, 1100)
+
+        }
+
+        function togglePrintOff() {
+
+            toggleDataSource();
+
+            $("#nonChartPanels").show("fade", { 'easing': 'easeOutExpo' }, 1000);
+            $("#toggleCountryListButton").click();
+            $("#printModeOff").hide("fade", { 'easing': 'easeOutExpo' }, 1000);
+        }
+
+        function initiate(container) {
+
+            if (!isCanvasSupported()) {
+                alert("Please update your browser or try a different one to use this page, as this page is using the <canvas> tag, which is not supported by your current browser.\n\nThis website has been optimized for Google Chrome.�");
+                return;
+            }
+
+            this._accordion = $('#accordion');
+
+            $(this._accordion).delegate('td', 'gavtap', function (e) {
+                $(".selected", this._table).removeClass('selected');
+                $("#countryDiv").text($(e.target).attr('data-countryName'));
+                $("#subjectSpan").text($(e.target).text());
+                var fileName = $(e.target).attr('data-file');
+                attributeId = $(e.target).attr('data-attributeId');
+                if (fileName != "") {
+                    initiateData(fileName);
+                }
+
+                _gaq.push(['_trackEvent', 'Country Selected', $(e.target).attr('data-countryName')]);
+                $(e.target).parent().addClass("selected");
+
+                window.location.replace("#?c=" + $(e.target).attr('data-countryName') + "&s=" + $(e.target).text());
+            });
+
+            // **************************************************************
+            // allow Station Move
+            // **************************************************************
+            /*
+             var allowStationMoveToggleId = "_asm";
+             var allowStationMoveToggleContainer = $("<div class='gav-checkbox-container'><input id='" + allowStationMoveToggleId + "' type='checkbox'/><label for='" + allowStationMoveToggleId + "'>Move Hubs</label></div>")[0];
+             $(allowStationMoveToggleContainer).css({
+             position:"absolute",
+             bottom:4,
+             right:4,
+             'z-index':1
+             });
+    
+             this._allowMoveToggle = $('input', allowStationMoveToggleContainer)[0];
+             this._allowMoveToggle.addEventListener('change', function (e) {
+             if(self._sankeyDiagram){
+             self._sankeyDiagram.setAllowStationMove(self._allowMoveToggle.checked);
+             }
+             });
+    
+             $(this._allowMoveToggle).attr('checked',self._sankeyDiagram ? self._sankeyDiagram.getAllowStationMove() : false);
+             this._contentPanel.appendChild(allowStationMoveToggleContainer);
+    
+             */
+
+
+
+            initiateConfig();
+        }
+
+        function updateSize() {
+            $('.chart').trigger('gavresize');
+
+            var h = $('#chartContainer').height() - 38 - 33;
+
+            $('#chartArea').css({
+                height: h
+            });
+
+            $('#time').css({
+                height: h * 0.3
+            });
+
+            if ($(time).is(":visible")) {
+                $('#sankeyContainer').css({
+                    height: h * 0.7
+                });
+            }
+            else {
+                $('#sankeyContainer').css({
+                    height: h
+                });
+            }
+
+            /*
+             var clh = $(".gav-floating-color-legend").height();
+             var sch =  $('#sankeyContainer').height();
+    
+             $(".gav-floating-color-legend").css({
+             top: sch - clh - 10
+             });
+             */
+        }
+
+        $(window).ready(function () {
+            initiate(document.getElementById("sContainer"));
+            $(window).resize(updateSize);
+            // $(timeButton).gavButton();
+            /*
+             $(timeButton).button();
+             */
+            $("#toggleCountryListButton").gavButton({ label: "Country List", icon: 'hidepanel-icon' }).click(function (event) {
+                toggleDataSource();
+            }).click();
+            $("#toggleColorLegendButton").gavButton({ label: "Colour Legend", icon: 'colorlegend-icon' }).click(function (event) {
+                toggleColorLegend();
+            });
+
+            $("#toggleTimeGraphButton").gavButton({ label: "Time Graph", icon: 'timegraph-icon' }).click(function (event) {
+                toggleTimeGraph();
+            });
+            $("#toggleAllowMoveButton").gavButton({ label: "Move Flows", icon: 'handles-icon' }).click(function (event) {
+                $("#sankeyPanel").data("component").setAllowStationMove($("#sankeyPanel").data("component").getAllowStationMove() ? false : true);
+            });
+
+            $("#toggleShowPieChartIconsButton").gavButton({ label: "Pie Chart", icon: 'piechart-icon' }).click(function (event) {
+                $("#sankeyPanel").data("component").getComponents()[0].setShowPieChartIcons($("#sankeyPanel").data("component").getComponents()[0].getShowPieChartIcons() ? false : true);
+            });
+
+            $("#toggleGlossary").gavButton({ label: "Glossary", icon: 'glossary-icon' });
+
+            $("#toggleShowHelpButton").gavButton({ label: "Help", icon: 'help-icon' }).click(function (event) {
+                toggleHelp(null);
+            });
+
+            $("#printModeOn").gavButton({ label: "Print Mode", icon: 'print-icon' }).click(function (event) {
+                togglePrintOn();
+            });
+
+            $("#printModeOff").gavButton({ label: "Exit Print Mode", icon: 'print-icon' }).click(function (event) {
+                togglePrintOff();
+            });
+
+
+
+
+
+            /*
+             $("#pauseIntroButton").gavButton({label:"Pause Intro", icon:'handles-icon'}).click(function( event ) {
+             $("#sankeyPanel").data("component").pauseIntro( $("#sankeyPanel").data("component").getIsIntroRunning() ? true : false );
+             });
+             */
+
+
+            /*
+             $('.gav-btn-wrap').each(function (i, el) {
+             $(el).addClass('ui-state-default');
+             });
+             */
+
+
+            $("#dataSourceButton").button();
+            $("#dataSourceButton").toggleClass("ui-custom-active");
+
+            updateSize();
+
+        });
+
+        function getAttributeXML(xmlTags) {
+
+            for (var i = 0; i < xmlTags.length; i++) {
+                if (xmlTags[i].getAttribute("id") == attributeId) {
+                    return xmlTags[i];
+                }
+            }
+            return null;
+
+        }
+
+        function toggleIntroPause() {
+            $("#sankeyPanel").data("component").pauseIntro(true);
+        }
+
+        function toggleTimeGraph() {
+            var h = $(time).is(":visible");
+            if (h) {
+                //$(time).animate({height:0});
+                $('#time').slideToggle(600, function () {
+                    updateSize();
+                });
+                $("#sankeyContainer").animate({ height: "100%" }, 600);
+            }
+            else {
+                // $(time).animate({height:300});
+                $("#sankeyContainer").animate({ height: "70%" }, 600);
+                $('#time').slideToggle(600, function () {
+                    updateSize();
+                });
+            }
+
+
+        }
+
+
+        function hideDataSourceButton() {
+            $("#dataSourceArrowImg").attr("src", "styles/images/arrowright.png");
+            // $("#dataSourceButton").fadeTo(400,0.5);
+            $(dataSourceButton).removeClass("ui-custom-active");
+        }
+
+        function showDataSourceButton() {
+            $("#dataSourceArrowImg").attr("src", "styles/images/arrowleft.png");
+            // $("#dataSourceButton").fadeTo(400,1.0);
+            $(dataSourceButton).addClass("ui-custom-active");
+
+
+        }
+
+        function toggleDataSource() {
+            if ($("#dataSourceDiv").width() > 0) {
+
+                $("#dataSourceDiv").animate({ opacity: 0 }, function () {
+                    $("#dataSourceDiv").animate({ width: 0 }, function () { });
+                    $("#chartArea").animate({ 'margin-left': 0 });
+
+                    $("#dataSourceButton").animate({ 'margin-left': 0 }, function () {
+                        updateSize();
+                        hideDataSourceButton();
+                    });
+
+                });
+            }
+            else {
+                $("#dataSourceDiv").animate({ width: 140 }, function () {
+
+                    $("#dataSourceDiv").animate({ opacity: 1 });
+                });
+                $("#chartArea").animate({ 'margin-left': 0 });
+                $("#dataSourceButton").animate({ 'margin-left': 140 }, function () {
+                    updateSize();
+                    showDataSourceButton();
+                });
+            }
+
+
+
+        }
+
+        function isCanvasSupported() {
+            var elem = document.createElement('canvas');
+            return !!(elem.getContext && elem.getContext('2d'));
+        }
+
+
+    </script>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+
+        _gaq.push(['_setAccount', 'UA-30291846-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+</head>
+
+<body class="high" style="overflow-x: hidden">
+
+    <div id="page" class="high">
+        <div id="allContainer" class="high">
+
+            <div id="chartContainer" class="high" style="position:absolute; width:100%">
+
+                <!-- <div id="dataSourceDiv" class="high" style="position:absolute; z-index:1; width:0px;">
+
+                    <div id="accordionContainer" class="high" style="overflow-y:auto; background-color: #fafafa">
+                        <div id="accordion" class="high">
+
+                        </div>
+                    </div>
+                </div> -->
+
+                <button id="dataSourceButton" class="hoverer" title="Toggle Country List" style="position:absolute;
+                            margin-left:142px;
+                            display:none;
+                            height:70px;
+                            width:15px;
+                            top:50%;
+                            -moz-border-radius-topleft: 0px;
+                            -webkit-border-top-left-radius: 0px;
+                            -moz-border-radius-bottomleft: 0px;
+                            -webkit-border-bottom-left-radius: 0px;
+                            z-index:1" onclick="javascript:toggleDataSource()">
+                    <img id="dataSourceArrowImg" src="styles/images/arrowleft.png" style="
+                                height:33px;
+                                width:6px;
+                                position: absolute;
+                                margin-top: -18px;
+                                margin-left: -9px;
+                                " />
+                </button>
+
+
+
+
+                <div id="chartArea" style="margin:0 0 0 140px; padding:0; height:100%">
+                    <!--div id="topBanner" style="width: 100%; padding:10px; background-color:#081c2f"-->
+                    <div id="sankeyContainer" class="high" style="width:100%">
+
+                        <div id="topBanner"
+                            style="width:100%; padding:10px; position: absolute; z-index:10; pointer-events:none">
+                            <div id="countryDiv" style="font-size: 2.5em;"></div>
+                            <div>
+                                <span id="subjectSpan" style="font-size:1.7em; color:#000; font-variant: small-caps;">
+                                </span>
+                                <span id="sliceSpan"
+                                    style="font-size:1.4em; color:#000; text-transform: uppercase"></span>
+                            </div>
+
+
+                        </div>
+
+                        <div id="sankeyPanel" class='chart high' data-component='SankeyPanel'
+                            style='width: 100%; height:100%;'>
+
+                        </div>
+                        <!-- <img id="logo" src="styles/images/logo.png" style="
+                                height:50px;
+                                position: absolute;
+                                right:0px;
+								top:0px;
+				" /> -->
+                    </div>
+
+
+
+                    <div id="timeContainer" style="overflow: hidden; z-index:1">
+                        <!--
+                    <button id="timeButton" title="Toggle time graph" style="position:absolute;
+                        margin-top:-32px;
+                        margin-left:4px;
+                        -moz-border-radius-bottomright: 0px;
+                        -webkit-border-bottom-right-radius: 0px;
+                        -moz-border-radius-bottomleft: 0px;
+                        -webkit-border-bottom-left-radius: 0px;"
+                    onclick="javascript:toggleTimeGraph()"><img src="timegraph.png"/></button>
+                    -->
+                        <div id="time" class='chart' data-component='TimeGraphPanel'
+                            style='width: 100%; height: 30%; display: none'></div>
+                    </div>
+
+                    <div id="nonChartPanels" class="ui-state-default">
+                        <div id="settingsPanel" style="width:100%; height:32px">
+                            <input id="toggleCountryListButton" type="checkbox" />
+                            <input id="toggleColorLegendButton" type="checkbox" />
+                            <input id="toggleTimeGraphButton" type="checkbox" />
+                            <input id="toggleAllowMoveButton" type="checkbox" />
+                            <input id="toggleShowPieChartIconsButton" type="checkbox" />
+                            <a href='../statistics/resources/balancedefinitions/' target='_blank'><button
+                                    id="toggleGlossary"></button></a>                            
+                            <button id="toggleShowHelpButton"></button>
+                            <button id="printModeOn" /></button>
+                        </div>
+
+                        <div style='margin:0 4px;height:38px;clear:both;box-sizing:border-box;position:relative;'>
+                            <div id="myBar"
+                                style='height:100%;position:relative;margin:0;background: none;border-top: 1px solid #DADADA;margin: 0;padding: 0;'
+                                class='gav-animation-bar'></div>
+                        </div>
+                    </div>
+                    <button id="printModeOff" style="display: none" /></button>
+                </div>
+
+            </div>
+            <div id="helpContainer" class="high"
+                style="position:absolute; width:100%; z-index:10; text-align: center; display: none">
+                <div id="helpWrapper" style="margin: 25px auto 0 auto;  height:84%">
+                    <img onclick="toggleHelp(null)" src="styles/images/help.png" alt="help"
+                        style="height: auto; max-height: 100%; box-shadow: 0px 0px 23px #111;" />
+                    <div id="closeHelpBar" style="height:30px; font-size:26px; margin-top:20px">
+                        <span onclick="toggleHelp(null)" style="cursor:pointer">Close [x]</span>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+	// ]]>
+    </script>
+</body>
+
+</html>
